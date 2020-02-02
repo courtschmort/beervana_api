@@ -11,25 +11,29 @@ class BreweriesController < ApplicationController
   end
 
   def create
-    @brewery = Brewery.create(brewery_params)
-    json_response(@brewery)
+    @brewery = Brewery.create!(brewery_params)
+    json_response(@brewery, :created)
   end
 
   def update
     @brewery = Brewery.find(params[:id])
-    @brewery.update(brewery_params)
+    if @brewery.update!(brewery_params)
+      render status: 200, json: {
+        message: "This brewery has been updated successfully."
+      }
+    end
   end
 
   def destroy
     @brewery = Brewery.find(params[:id])
-    @brewery.destroy
+    if @brewery.destroy
+      render status: 200, json: {
+        message: "This brewery has been deleted successfully."
+      }
+    end
   end
 
   private
-
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
 
   def brewery_params
     params.permit(:name, :street_address, :city, :state, :zip, :phone_number, :website, :neighborhood, :pet_friendly)
