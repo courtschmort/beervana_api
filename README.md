@@ -13,27 +13,27 @@ Updated February 2, 2020
 >
 > ###### Building an API
 > For your final Ruby/Rails code review, you may build one of the three APIs below. (You may also build an API of your choosing if you prefer.)
-* **Animal Shelter:** Create an API for a local animal shelter. The API will list the available cats and dogs at the shelter.
-* **Local Business Lookup:** Create an API for a local business lookup. The API will list restaurants and shops in town.
-* **Parks Lookup:** Create an API for state and national parks. The API will list state and national parks.
+> * **Animal Shelter:** Create an API for a local animal shelter. The API will list the available cats and dogs at the shelter.
+> * **Local Business Lookup:** Create an API for a local business lookup. The API will list restaurants and shops in town.
+> * **Parks Lookup:** Create an API for state and national parks. The API will list state and national parks.
 >
 > You have the freedom to build out your APIs as you wish. Try adding the following to your API:
-* Endpoints for `GET` (all and by id), `POST`, `PUT` and `DELETE`.
-* A `RANDOM` endpoint that **randomly** returns a park/business/animal.
-* A second custom endpoint that accepts parameters (example: a `SEARCH` route that allows users to search by specific park names).
-* Model scopes to process parameters from API calls.
-* At least one of the objectives from Monday's Further Exploration lesson (such as versioning, token authentication, or serialization).
-* Thorough exception handling.
-* Complete testing with request specs.
-* Randomized data with Faker or your own custom seed code.
-* A README that **thoroughly** documents all endpoints, including parameters that can be passed in.
+> * Endpoints for `GET` (all and by id), `POST`, `PUT` and `DELETE`.
+> * A `RANDOM` endpoint that **randomly** returns a park/business/animal.
+> * A second custom endpoint that accepts parameters (example: a `SEARCH` route that allows users to search by specific park names).
+> * Model scopes to process parameters from API calls.
+> * At least one of the objectives from Monday's Further Exploration lesson (such as versioning, token authentication, or serialization).
+> * Thorough exception handling.
+> * Complete testing with request specs.
+> * Randomized data with Faker or your own custom seed code.
+> * A README that **thoroughly** documents all endpoints, including parameters that can be passed in.
 >
 > #### Objectives
-* Application successfully returns responses for API calls.
-* Commit history and project clearly show eight hours of work.
-* README thoroughly describes all endpoints along with parameters that can be used.
-* Project is in a presentable, portfolio-quality state.
-* Project demonstrates understanding of all concepts covered this week. If prompted, you can discuss your application with an instructor using the correct terminology.
+> * Application successfully returns responses for API calls.
+> * Commit history and project clearly show eight hours of work.
+> * README thoroughly describes all endpoints along with parameters that can be used.
+> * Project is in a presentable, portfolio-quality state.
+> * Project demonstrates understanding of all concepts covered this week. If prompted, you can discuss your application with an instructor using the correct terminology.
 
 <!-- ## Documentation -->
 
