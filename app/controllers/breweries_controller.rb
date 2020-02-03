@@ -1,8 +1,19 @@
 class BreweriesController < ApplicationController
 
   def index
-    @breweries = Brewery.all
-    json_response(@breweries)
+    if params[:search_parameter]
+      @breweries = Brewery.search(params[:search_parameter])
+      if @breweries.blank?
+      render status: 200, json: {
+        message: "No results found."
+      }
+      else
+        json_response(@breweries)
+      end
+    else
+      @breweries = Brewery.all
+      json_response(@breweries)
+    end
   end
 
   def show
@@ -34,7 +45,7 @@ class BreweriesController < ApplicationController
   end
 
   private
-
+  
   def brewery_params
     params.permit(:name, :street_address, :city, :state, :zip, :phone_number, :website, :neighborhood, :pet_friendly)
   end
