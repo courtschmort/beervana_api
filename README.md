@@ -88,7 +88,7 @@ For more information about cloning repositories available on GitHub, click [here
 4. Complete the following lessons at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Ruby:
   * [Installing Ruby](https://www.learnhowtoprogram.com/ruby/getting-started-with-ruby/installing-ruby)
 5. To bundle gems, type `bundle` after the command prompt.
-6. To start the Rails server, type `rails s` after the command prompt (**control-C** to exit) and open http://localhost:3000/breweries in the Postman API Platform.
+6. To start the Rails server, type `rails s` after the command prompt (**control-C** to exit) and `GET` http://localhost:3000/breweries in the Postman API Platform.
 
 ###### Database
 
