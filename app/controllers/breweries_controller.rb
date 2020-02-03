@@ -1,11 +1,11 @@
 class BreweriesController < ApplicationController
 
   def index
-    if params[:search_parameter]
-      @breweries = Brewery.search(params[:search_parameter])
+    if params[:query]
+      @breweries = Brewery.search(params[:query])
       if @breweries.blank?
       render status: 200, json: {
-        message: "No results found."
+        message: "No results found for #{params[:query]}."
       }
       else
         json_response(@breweries)
@@ -30,7 +30,7 @@ class BreweriesController < ApplicationController
     @brewery = Brewery.find(params[:id])
     if @brewery.update!(brewery_params)
       render status: 200, json: {
-        message: "This brewery has been updated successfully."
+        message: "#{@brewery.name} has been updated successfully."
       }
     end
   end
@@ -39,13 +39,13 @@ class BreweriesController < ApplicationController
     @brewery = Brewery.find(params[:id])
     if @brewery.destroy
       render status: 200, json: {
-        message: "This brewery has been deleted successfully."
+        message: "#{@brewery.name} has been deleted successfully."
       }
     end
   end
 
   private
-  
+
   def brewery_params
     params.permit(:name, :street_address, :city, :state, :zip, :phone_number, :website, :neighborhood, :pet_friendly)
   end
