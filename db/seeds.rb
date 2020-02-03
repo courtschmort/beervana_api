@@ -8,6 +8,8 @@
 
 class Seed
 
+  Brewery.destroy_all
+
   def self.begin
     seed = Seed.new
     seed.generate_breweries
