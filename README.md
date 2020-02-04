@@ -132,9 +132,9 @@ In the future, I plan to include the following key features:
 ## Technologies Used
 
 * Markdown
-* Ruby on Rails
-* BCrypt
 * Postman
+* Ruby on Rails
+* PostgreSQL
 * Atom
 
 ## License
