@@ -35,7 +35,18 @@ Updated February 2, 2020
 > * Project is in a presentable, portfolio-quality state.
 > * Project demonstrates understanding of all concepts covered this week. If prompted, you can discuss your application with an instructor using the correct terminology.
 
-<!-- ## Documentation -->
+## Documentation
+
+#### API Endpoints
+
+| Description | Method | Request URL | Params | Response |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Show all breweries | `GET` | /, /breweries |  | 200 OK, 404 Not Found |
+| Add a brewery | `POST` | /breweries | `:name`, `:street_address`, `:city`, `:state`, `:zip`, `:phone_number`, `:website`, `:neighborhood`, `:pet_friendly` | 201 Created, 404 Not Found, 422 Unprocessable Entity |
+| Show a brewery | `GET` | /breweries/`:id` |  | 200 OK, 404 Not Found |
+| Update a brewery | `PUT` | /breweries/`:id` | `:name`, `:street_address`, `:city`, `:state`, `:zip`, `:phone_number`, `:website`, `:neighborhood`, `:pet_friendly` | 200 OK, 404 Not Found |
+| Destroy a brewery | `DELETE` | /breweries/`:id` |  | 200 OK, 404 Not Found |
+| Search for a brewery by name | `GET` | /breweries?query= | `:name` | 200 OK |
 
 <!-- ## Specs -->
 
@@ -66,7 +77,7 @@ Updated February 2, 2020
 
 ## Setup/Installation Requirements
 
-Please note that this application requires **Ruby 2.6.5** and **Rails 5.2.4.1**.
+Please note that this application requires **Ruby 2.6.5** and **Rails 5.2.4.1**, as well as **Postgres 12.1**.
 
 This API may be used with Postman. (Download the free Postman app [here](https://www.getpostman.com/).) Follow the instructions below to clone or download the repository to your computer, re-create (and optionally seed) the database, as well as run all existing migrations.
 
@@ -83,10 +94,11 @@ This API may be used with Postman. (Download the free Postman app [here](https:/
 
 For more information about cloning repositories available on GitHub, click [here](https://help.github.com/en/articles/which-remote-url-should-i-use).
 
-#### Ruby on Rails
+#### Ruby on Rails & PostgreSQL
 
-4. Complete the following lessons at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Ruby:
+4. Complete the following lessons at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Ruby and Postgres:
   * [Installing Ruby](https://www.learnhowtoprogram.com/ruby/getting-started-with-ruby/installing-ruby)
+  * [Installing Postgres](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-postgres-b34be9fd-381b-472e-bdb2-5c5c3f572b16)
 5. To bundle gems, type `bundle` after the command prompt.
 6. To start the Rails server, type `rails s` after the command prompt (**control-C** to exit) and `GET` http://localhost:3000/breweries in the Postman API Platform.
 
