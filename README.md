@@ -39,14 +39,14 @@ Updated February 2, 2020
 
 #### API Endpoints
 
-| Description | Method | Request URL | Params | Response |
+| Title | Request URL | Method | Params | Response |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Show all breweries | `GET` | /, /breweries |  | 200 OK, 404 Not Found |
-| Add a brewery | `POST` | /breweries | `:name`, `:street_address`, `:city`, `:state`, `:zip`, `:phone_number`, `:website`, `:neighborhood`, `:pet_friendly` | 201 Created, 404 Not Found, 422 Unprocessable Entity |
+| Show all breweries | / **or** /breweries | `GET` |  | 200 OK, 404 Not Found |
+| Add a brewery | /breweries | `POST` | **Required:** `:name`, **Optional:** `:street_address`, `:city`, `:state`, `:zip`, `:phone_number`, `:website`, `:neighborhood`, `:pet_friendly` | 201 Created, 404 Not Found, 422 Unprocessable Entity |
 | Show a brewery | `GET` | /breweries/`:id` |  | 200 OK, 404 Not Found |
-| Update a brewery | `PUT` | /breweries/`:id` | `:name`, `:street_address`, `:city`, `:state`, `:zip`, `:phone_number`, `:website`, `:neighborhood`, `:pet_friendly` | 200 OK, 404 Not Found |
+| Update a brewery | `PUT` | /breweries/`:id` | **Optional:** `:name`, `:street_address`, `:city`, `:state`, `:zip`, `:phone_number`, `:website`, `:neighborhood`, `:pet_friendly` | 200 OK, 404 Not Found |
 | Destroy a brewery | `DELETE` | /breweries/`:id` |  | 200 OK, 404 Not Found |
-| Search for a brewery by name | `GET` | /breweries?query= | `:name` | 200 OK |
+| Search for a brewery by name | `GET` | /breweries?query= | **Optional:** `:name` | 200 OK |
 
 <!-- ## Specs -->
 
